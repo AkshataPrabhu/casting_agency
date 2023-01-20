@@ -74,10 +74,9 @@ flask run --reload
 
 ## API Reference
 
-### Getting Started
-############# aAKSHATA UPDATE THIS
-- Base URL: At present this app can only be run locally and is not hosted as a base URL. The backend app is hosted at the default, `http://127.0.0.1:5000/`, which is set as a proxy in the frontend configuration.
-
+### Getting Started 
+- Base URL: `https://akshata-casting-agency.onrender.com`
+- 
 ### Error Handling
 Errors are returned as JSON objects in the following format:
 ```
@@ -97,7 +96,7 @@ The API will return three error types when requests fail:
    -  Fetches a dictionary of movies
    - Request Arguments: None
    - Returns: list of movies
-- Sample: `curl http://127.0.0.1:5000/movies`
+- Sample: `curl https://akshata-casting-agency.onrender.com/movies`
 
 ``` {
   {
@@ -115,7 +114,7 @@ The API will return three error types when requests fail:
 - General:
    -  Fetches a dictionary of actors
    - Request Arguments: None
-- Sample: `curl http://127.0.0.1:5000/actors`
+- Sample: `curl https://akshata-casting-agency.onrender.com/actors`
 
 ``` {
   {
@@ -139,7 +138,7 @@ The API will return three error types when requests fail:
   - Deletes a specified actor using the id of the actor
   - Request Arguments: id - integer
   - Returns: returns the deleted actor id along with status code.
-- Sample: `curl -X DELETE http://127.0.0.1:5000/questions/16`
+- Sample: `curl -X DELETE https://akshata-casting-agency.onrender.com/questions/16`
 - Response Sample
 ```
 {
@@ -154,7 +153,7 @@ The API will return three error types when requests fail:
   - Deletes a specified movie using the id of the movie
   - Request Arguments: id - integer
   - Returns: returns the deleted movie id along with status code.
-- Sample: `curl -X DELETE http://127.0.0.1:5000/movie/16`
+- Sample: `curl -X DELETE https://akshata-casting-agency.onrender.com/movie/16`
 - Response Sample
 ```
 {
@@ -167,7 +166,7 @@ The API will return three error types when requests fail:
 - General
   - Sends a post request to create a new actor
   - Returns: id of the newly created actor
-- Sample `'{"name":"John","age":32, "gender":"male"}'`
+- Sample `curl https://akshata-casting-agency.onrender.com/actor -X POST -H "Content-Type: application/json" -d '{"name":"John","age":32, "gender":"male"}'`
 - Response sample
 ```
 {
@@ -180,7 +179,7 @@ The API will return three error types when requests fail:
 - General
   - Sends a post request to create a new movie
   - Returns: id of the newly created actor
-- Sample `'{"title": "Titanic",release_date":"2020-1-1"}'`
+- Sample `curl https://akshata-casting-agency.onrender.com/actor -X POST -H "Content-Type: application/json" -d '{"title": "Titanic",release_date":"2020-1-1"}'`
 - Response sample
 ```
 {
@@ -194,7 +193,7 @@ The API will return three error types when requests fail:
 - General
   - Sends a patch request to update an actor
   - Returns: id of the updated  actor
-- Sample `'{"name":"John","age":32, "gender":"male"}'`
+- Sample `curl https://akshata-casting-agency.onrender.com/actor{id} -X PATCH -H "Content-Type: application/json" -d '{"name":"John","age":32, "gender":"male"}'`
 - Response sample
 ```
 {
@@ -207,7 +206,7 @@ The API will return three error types when requests fail:
 - General
   - Sends a post request to update movie 
   - Returns: id of the updated movie
-- Sample `'{"title": "Titanic",release_date":"2020-1-1"}'`
+- Sample `curl https://akshata-casting-agency.onrender.com/actor/{id} -X PATCH -H "Content-Type: application/json" -d ''{"title": "Titanic",release_date":"2020-1-1"}'`
 - Response sample
 ```
 {
