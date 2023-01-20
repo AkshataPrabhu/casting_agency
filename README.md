@@ -215,3 +215,14 @@ The API will return three error types when requests fail:
 }
 
 ```
+
+## Testing
+
+To deploy the tests, run
+
+```bash
+dropdb casting_agency_test
+createdb casting_agency_test
+psql casting_agency_test < dump.psql
+python test_app.py
+```
