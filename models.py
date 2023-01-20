@@ -5,9 +5,9 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 from flask_cors import CORS
 
-database_name = 'casting_agency'
-database_path = 'postgresql://{}/{}'.format('localhost:5432', database_name)
-
+# database_name = 'casting_agency'
+# database_path = 'postgresql://{}/{}'.format('localhost:5432', database_name)
+database_path = os.environ['DATABASE_URL']
 db = SQLAlchemy()
 
 
